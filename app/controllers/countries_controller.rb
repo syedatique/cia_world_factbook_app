@@ -1,7 +1,11 @@
 class CountriesController < ApplicationController
 
     def index
+      if params[:name]
+      @countries = Country.where("name ilike ?", "%#{params[:name]}%")
+      else
       @countries = Country.all
+      end
     end
 
     def new
@@ -36,8 +40,8 @@ class CountriesController < ApplicationController
     end
 
     def search
-      @country = Country.where name: [:params]
-      # redirect_to(country_path)
+      @country = Country.where name: params[:name]
+      # redirect_to(search_path)
     end
 
 
