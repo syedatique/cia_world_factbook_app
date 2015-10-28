@@ -1,0 +1,18 @@
+<h1><%= @country.name %></h1>
+<br>
+<b>Flag of the Country</b>
+<p><%= image_tag(@country.flag_image) %></p>
+<br>
+<b>Size of the Country</b>
+<p><%= number_to_human(@country.size) %></p>
+<br>
+<b>Population of the Country</b>
+<p><%= number_to_human(@country.population) %></p>
+<br>
+<b>First language of the Country</b>
+<p><%= @country.first_language %></p>
+<br>
+<b>Currancy of the Country</b>
+<p><%= @country.currancy %></p>
+
+<%= link_to 'Back', countries_path %>

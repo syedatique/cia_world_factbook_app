@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  flag_image: MyString
+  size: 9.99
+  population: 9.99
+  first_language: MyText
+  currancy: MyString
+
+two:
+  name: MyString
+  flag_image: MyString
+  size: 9.99
+  population: 9.99
+  first_language: MyText
+  currancy: MyString

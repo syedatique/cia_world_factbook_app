@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CiaWorldFactbookApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav>
+  <ul>
+    <li> <%= link_to('Countries', countries_path)%></li>
+    <li> <%= link_to('New Country', new_country_path)%></li>
+  </ul>
+</nav>
+
+
+<%= form_tag(countries_path, method: :get) do %>
+  
+  <p>Enter a search term below</p>
+  
+  <%= text_field_tag :option%>
+  <%= submit_tag "Submit!"%>
+
+  <% end %>
+
+
+
+<%= yield %>
+
+</body>
+</html>
