@@ -1,0 +1,8 @@
+<nav>
+  <div> <%= country.name%> </div>
+  
+  <%= button_to('Show', country_path(country), method: :get)%>
+  <%= button_to('Edit', edit_country_path(country), method: :get)%>
+  <%= button_to('Delete country', country_path(country), method: :delete, data:{confirm: 'Delete the country? Are you sure?'})%>
+<br>
+</nav>

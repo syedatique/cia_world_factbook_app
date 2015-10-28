@@ -5,25 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+
+
 </head>
 <body>
-<nav>
-  <ul>
-    <li> <%= link_to('Countries', countries_path)%></li>
-    <li> <%= link_to('New Country', new_country_path)%></li>
-  </ul>
-</nav>
+<div class="container">
 
+  <%= render partial: "layouts/menu"%>
 
-
-  <%= form_tag(countries_path, method: "get") do %>
-    <%= label_tag(:name, "Search for:") %>
-    <%= text_field_tag(:name) %>
-    <%= submit_tag("Search") %>
-  <% end %>
-
-
-<%= yield %>
+  <%= yield %>
+  
+</div>
 
 <br>
 <%= link_to 'Back', countries_path %>

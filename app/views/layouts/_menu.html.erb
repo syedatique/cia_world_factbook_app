@@ -1,0 +1,27 @@
+<nav>
+  <ul>
+    <li> <%= link_to('Countries', countries_path)%></li>
+    <li> <%= link_to('New Country', new_country_path)%></li>
+  </ul>
+</nav>
+
+  <%= form_tag(countries_path, method: "get") do %>
+    <%= label_tag(:name, "Search for:") %>
+    <%= text_field_tag(:name) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+
+  <nav>
+    <ul>
+      <li> <%= link_to('Cities', cities_path)%></li>
+      <li> <%= link_to('New City', new_city_path)%></li>
+    </ul>
+  </nav>
+
+    <%= form_tag(cities_path, method: "get") do %>
+      <%= label_tag(:name, "Search for:") %>
+      <%= text_field_tag(:name) %>
+      <%= submit_tag("Search") %>
+    <% end %>
+    <br>
+    <br>

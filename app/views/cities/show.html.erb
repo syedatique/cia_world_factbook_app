@@ -1,0 +1,12 @@
+<h1><%= @city.name %></h1>
+
+<b>Country name</b>
+<div><%= @city.name%> is in country: <%= @city.country.name %></div>
+
+<b>Size of the city</b>
+<p><%= number_to_human(@city.size) %></p>
+
+<b>Population of the city</b>
+<p><%= number_to_human(@city.population) %></p>
+
+<%#= link_to 'Back', countries_path %>

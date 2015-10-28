@@ -1,0 +1,28 @@
+<%= form_for @country do |f|%>
+
+<%= f.label :name, 'Country name'%>
+<%= f.text_field :name%> 
+<br>
+
+<%= f.label :flag_image, 'Flag of the country'%>
+<%= f.text_field :flag_image%> 
+<br>
+
+<%= f.label :size, 'Size of the country'%>
+<%= f.text_field :size%> 
+<br>
+
+<%= f.label :population, 'Population of the country'%>
+<%= f.text_field :population%> 
+<br>
+<%= f.label :first_language, 'First language of the country'%>
+<%= f.text_field :first_language%> 
+<br>
+
+<%= f.label :currancy, 'Currency of the country'%>
+<%= f.text_field :currancy%> 
+<br>
+
+<%= f.submit button_text %>
+
+<% end %>

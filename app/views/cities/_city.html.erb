@@ -1,0 +1,8 @@
+<nav>
+  <div> <%= city.name%> </div>
+  
+  <%= button_to('Show', city_path(city), method: :get)%>
+  <%= button_to('Edit', edit_city_path(city), method: :get)%>
+  <%= button_to('Delete city', city_path(city), method: :delete, data:{confirm: 'Delete the city? Are you sure?'})%>
+<br>
+</nav>

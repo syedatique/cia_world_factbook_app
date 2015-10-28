@@ -1,0 +1,22 @@
+<%= form_for @city do |f|%>
+
+<%= f.label :name, 'city name'%>
+<%= f.text_field :name%> 
+<br>
+
+<%= f.label :country_id%>
+<%= f.select(:country_id, Country.all.collect {|c| [c.name, c.id]})%> 
+
+<br>
+
+<%= f.label :population, 'Population of the city'%>
+<%= f.text_field :population%> 
+<br>
+
+<%= f.label :size, 'Size of the city'%>
+<%= f.text_field :size%> 
+<br>
+
+<%= f.submit button_text %>
+
+<% end %>
